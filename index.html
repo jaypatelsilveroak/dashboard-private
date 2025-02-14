@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Patel - UI/UX Designer Dashboard</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #1a1a1a; /* Black background */
+      color: #ffffff; /* White text */
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d47a1; /* Dark blue */
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #bdbdbd; /* Light grey */
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Sales Projects Section */
+    .sales-projects h2,
+    .new-messages h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #64b5f6; /* Light blue */
+    }
+
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #263238; /* Dark grey */
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #64b5f6; /* Light blue */
+    }
+
+    .card .count {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff; /* White */
+    }
+
+    .card .description {
+      font-size: 1rem;
+      color: #bdbdbd; /* Light grey */
+    }
+
+    /* New Messages Section */
+    .messages-list {
+      background-color: #263238; /* Dark grey */
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .message {
+      padding: 10px;
+      border-bottom: 1px solid #37474f; /* Darker grey */
+    }
+
+    .message:last-child {
+      border-bottom: none;
+    }
+
+    .message p {
+      margin-bottom: 5px;
+    }
+
+    .message .time {
+      font-size: 0.9rem;
+      color: #bdbdbd; /* Light grey */
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #0d47a1; /* Dark blue */
+      color: #bdbdbd; /* Light grey */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .project-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="header">
+      <h1>Jay Patel</h1>
+      <p>UI/UX Designer</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Sales Projects Section -->
+      <section class="sales-projects">
+        <h2>Sales Projects</h2>
+        <div class="project-cards">
+          <div class="card completed">
+            <h3>Completed</h3>
+            <p class="count">12</p>
+            <p class="description">Projects successfully delivered.</p>
+          </div>
+          <div class="card running">
+            <h3>Running</h3>
+            <p class="count">8</p>
+            <p class="description">Projects currently in progress.</p>
+          </div>
+          <div class="card pending">
+            <h3>Pending</h3>
+            <p class="count">5</p>
+            <p class="description">Projects awaiting approval.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Messages Section -->
+      <section class="new-messages">
+        <h2>New Messages</h2>
+        <div class="messages-list">
+          <div class="message">
+            <p><strong>abhishek:</strong> jaldi karo bhai project khatam karo</p>
+            <span class="time">10:30 AM</span>
+          </div>
+          <div class="message">
+            <p><strong>vivek:</strong> bhai gpay kardu project k paise</p>
+            <span class="time">09:15 AM</span>
+          </div>
+          <div class="message">
+            <p><strong>Team:</strong> Meeting hai 3 pm koi late mat hona</p>
+            <span class="time">08:45 AM</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Jay Patel. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
